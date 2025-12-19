@@ -118,5 +118,64 @@ int main() {
     // Right Shift operator
    cout << "f >> 1: " << (f >> 1) << endl;
 
+   // Assignment Operators
+   // Assignment Operators are used to assign values to variables.
+    /*
+          Assignment, =, Assigns values from right side operands to left side operand
+          Add AND Assignment, +=, Adds right operand to the left operand and assigns the result to left operand
+          Subtract AND Assignment, -=, Subtracts right operand from the left operand and assigns the result to left operand
+          Multiply AND Assignment, *=, Multiplies right operand with the left operand and assigns the result to left operand
+          Divide AND Assignment, /=, Divides left operand by the right operand and assigns the result to left operand
+          Modulo AND Assignment, %=, Takes modulus using two operands and assigns the result to left operand
+    */
+    int h = 10, i = 5;
+    // Assignment
+    h = i;
+    cout << "h = i: " << h << endl;
+    // Add AND Assignment
+    h += i;
+    cout << "h += i: " << h << endl;
+    // Subtract AND Assignment
+    h -= i;
+    cout << "h -= i: " << h << endl;
+    // Multiply AND Assignment
+    h *= i;
+    cout << "h *= i: " << h << endl;
+    // Divide AND Assignment
+    h /= i;
+    cout << "h /= i: " << h << endl;
+    // Modulo AND Assignment
+    h %= i;
+    cout << "h %= i: " << h << endl;
+
+    // Ternary Operator or Conditional Operator
+    // The ternary operator is the only operator that takes three operands.
+    /*
+        condition ? expression1 : expression2
+    */
+    int j = 10, k = 20;
+    int max = (j > k) ? j : k;
+    cout << "Max value is: " << max << endl;
+
+    // Miscellaneous Operators
+    /*
+        sizeof, Returns the size of a data type or a variable
+    */
+    int l = 10;
+    // sizeof operator
+    cout << "Size of l: " << sizeof(l) << " bytes" << endl;
+
+    /*
+        Comma Operator, ,, Used to separate multiple expressions where only one expression is expected
+    */
+    int m, n;
+    m = (n = 5, n + 10); // n is assigned 5, then m is assigned n + 10
+    cout << "Value of m: " << m << endl;
+
+    /*
+        Address-of Operator, &, Returns the memory address of a variable
+    */
+    int o = 10;
+    cout << "Address of o: " << &o << endl;
    return 0;
 }
