@@ -2,6 +2,7 @@
 // In such cases, loops come into play, allowing users to repeatedly execute a block of statements any number of times.
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -35,6 +36,22 @@ int main() {
         j++;
     }
     while(j <= 5);
+    cout << endl;
+    // 4. For each loop
+    // The for-each loop in C++ is range-based loop. It automatically iterates over the elements of a container
+    // such as arrays, vectors, or lists without the need for explicit indexing.
+    vector<int> arr = {1, 2, 3, 4, 5};
+    // By Value
+    cout << "Iterating by value: " << endl;
+    for (auto it: arr) {
+        cout << it << " ";
+    }
+    cout << endl;
+    // By Reference
+    cout << "Iterating by reference: " << endl;
+    for (auto &it: arr) {
+        cout << it << " ";
+    }
     cout << endl;
     return 0;
 }
