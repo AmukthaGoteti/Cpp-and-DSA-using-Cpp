@@ -40,5 +40,28 @@ int main() {
         }
     }
 
+    // Check whether a year is leap year or not
+    int year;
+    cout << "Enter a year: ";
+    cin >> year;
+    // Outer if else
+    if (year % 4 == 0) {
+        // Nested if else
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                cout << year << " is a leap year." << endl;
+            }
+            else {
+                cout << year << " is not a leap year." << endl;
+            }
+        }
+        else {
+            cout << year << " is a leap year." << endl;
+        }
+    }
+    else {
+        cout << year << " is not a leap year." << endl;
+    }
+
     return 0;
 }
