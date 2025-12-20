@@ -58,5 +58,13 @@ int main() {
     /*for(;;) {
         cout << "This Loop will run forever." << endl;
     }*/
+   // 6. Nesting Loop
+   // Nesting of loops means putting one loop inside another, 
+   // where the inner loop runs completely each time the outer loop runs, helping you repeat tasks in steps within steps.
+   for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << "i = " << i << ", j = " << j << endl;
+        }
+   }
     return 0;
 }
