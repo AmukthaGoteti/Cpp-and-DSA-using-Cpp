@@ -85,5 +85,8 @@ int main() {
             cout << "Error! operator is not correct" << endl;
             break;
     }
+
+    // C++ allows nested switch statements, meaning that we can add another switch case inside another switch case.
+    // However, it is not a common practice and should be used judiciously to maintain code readability.
     return 0;
 }
