@@ -17,5 +17,24 @@ int main() {
         cout << num << " ";
     }
     cout << endl;
+    // 2. while loop
+    // The while loop is also an entry-controlled loop which is used in situations 
+    // where we do not know the exact number of iterations of the beforhand.
+    int i = 1;
+    while (i <= 5) {
+        cout << i << " ";
+        i++;
+    }
+    cout << endl;
+    // 3. do-while loop
+    // The do-while loop is an exit controlled loop, 
+    // which means the condition is checked after executing the body of the loop.
+    int j = 1;
+    do {
+        cout << j << " ";
+        j++;
+    }
+    while(j <= 5);
+    cout << endl;
     return 0;
 }
