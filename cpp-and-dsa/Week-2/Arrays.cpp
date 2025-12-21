@@ -48,5 +48,18 @@ int main() {
     // Moreover, all the elements can be easily initialized to 0
     int arr5[5] = {0}; // all elements will be initialized to 0
     // This method only works for 0, but not for any other value.
+    // Note: The value assigned should be of the same type of the array elements specified in the declaration.
+    // Elements of an array can be accessed by the their position (called index) in the sequence.
+    // In C++, indexes of an array starts from 0 instead of 1.
+    // We just have to pass this index inside the [] square brackets with the array name.
+    // array_name[index]
+    // It is important to note that index cannot be negative or greater than size of the array minus 1. 
+    // (0 ≤ index ≤ size - 1). 
+    // Also, it can also be any expression that results in valid index value.
+    int arr6[] = {2, 4, 8, 12, 16};
+    // Accessing 4th element
+    cout << arr6[3] << endl; // Output: 12
+    // Accessing 1st element
+    cout << arr6[0] << endl; // Output: 2
     return 0;
 }
