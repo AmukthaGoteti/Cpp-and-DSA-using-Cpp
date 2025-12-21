@@ -100,5 +100,16 @@ int main() {
     cout << endl;
 
     // The size of the array refers to the number of elements that can be stored in the array.
+    // The array does not contain the information about its size but we can extract the size using sizeof() operator.
+    int arr10[] = {2, 4, 8, 12, 16};
+    cout << "Size of arr[0]: " << sizeof(arr[0]) << endl;
+    cout << "Size of arr10: " << sizeof(arr10)<< endl;
+    int n2 = sizeof(arr10) / sizeof(arr10[0]);
+    cout << "Number of elements in arr10: " << n2 << endl;
+
+    // In C++, arrays and pointers are closely related to each other. The array name can be treated as a constant pointer that stored the memory address of the first element of the array.
+    int arr11[5];
+    cout << arr11 << endl;
+    cout << &arr11[0] << endl;
     return 0;
 }
