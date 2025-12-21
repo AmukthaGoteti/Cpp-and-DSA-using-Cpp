@@ -79,4 +79,26 @@ int main() {
         cout << arr7[i] << " ";
     }
     cout << endl;
+
+    // Traversing means going through each element of an array one by one. 
+    // An array is easy to traverse because we can use a loop that 
+    // starts from index 0 and goes up to the last element. 
+    // Using the loop index, we can access and work with each element in order.
+    int arr8[5] = {2, 4, 8, 12, 16};
+    // Traversing and printing arr8
+    for (int i = 0; i < 5; i++) {
+        cout << arr8[i] << " ";
+    }
+    cout << endl;
+
+    // (or)
+    int arr9[] = {2, 4, 8, 12, 16};
+    int n1 = sizeof(arr9) / sizeof(arr9[0]);
+    for( int i = 0; i < n1; i++) {
+        cout << arr9[i] << " ";
+    }
+    cout << endl;
+
+    // The size of the array refers to the number of elements that can be stored in the array.
+    return 0;
 }
