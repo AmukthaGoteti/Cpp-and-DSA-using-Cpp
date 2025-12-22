@@ -70,7 +70,7 @@ int main() {
     /*
         The double data type is used to store decimal numbers with higher precision.
         The keword used to define double-precision floating-point numbers is double.
-        Its size is 8 byte (on 64-bit systems) and can store the values in the range form -1.7e-308 to 1.7e-308
+        Its size is 8 byte (on 64-bit systems) and can store the values in the range from -1.7e-308 to 1.7e-308
     */
 
     // double precision floating point variable
