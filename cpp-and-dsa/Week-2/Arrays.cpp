@@ -111,5 +111,15 @@ int main() {
     int arr11[5];
     cout << arr11 << endl;
     cout << &arr11[0] << endl;
+
+    // Internally, arrays operators are performed using pointer arithmetic.
+    // So, we can do almost any array operation using 
+    // by using pointer to the first element.
+    int arr12[] = {2, 4, 8, 12, 16};
+    int* ptr = arr12;
+    for(int i = 0; i < 5; i++) {
+        cout << *(ptr + i) << " ";
+    }
+    cout << endl;
     return 0;
 }
