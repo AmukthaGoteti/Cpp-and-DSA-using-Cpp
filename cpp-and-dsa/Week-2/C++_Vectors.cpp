@@ -32,4 +32,27 @@ int main() {
         cout<< v3[i] << " ";
     }
     cout << endl;
+    /*
+        You can access elements in a vector using v[i] for direct access or v.at(i) for bounds-checked access.
+        Both return the element at index i, but at(i) throws an exception if i is out of range.
+        It takes constant time O(1) on average, so it's very fast.
+    */
+    vector<int> v4 = {10, 20, 30, 40};
+    cout << v4[2] << endl;    // Direct access
+    cout << v4.at(3) << endl; // Bounds-checked access
+    // Uncommenting the next line will throw an 
+    // out_of_range exception 
+    // cout v.at(10)<<endl;
+    /*
+        To update an element, you simply use its index with the assignment operator, for example v[i]=newValue;
+        This replaces the old element at index i with the new value you want.
+    */
+    vector<int> v5 = {10, 20, 30};
+    cout << "Original value at index 1: " << v5[1] << endl;
+    v5[1] = 50; // Update element at index 1
+    cout << "Updated value at index 1: " << v5[1] << endl;
+
+    vector<char> v6 = {'a', 'c', 'f', 'd', 'z'};
+    cout << v6.size() << endl; // Size of vector
+    return 0;
 }
