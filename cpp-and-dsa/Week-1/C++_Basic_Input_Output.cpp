@@ -1,5 +1,5 @@
 /* 
-    In C++, data is read and written using strams, which are sequences of bytes.
+    In C++, data is read and written using streams, which are sequences of bytes.
     Input Stream: Data flows from device (like the keyboard) to the computer's memory.
     Output Stream: Data flows from memory to an output device (like screen).
     These streams are defines in the <iostream> header file
