@@ -4,6 +4,13 @@
 #include <iostream>
 using namespace std;
 
+void printArray(int arr13[], int n3) {
+        for (int i = 0; i < n3; i ++) {
+            cout << arr13[i] << " ";
+        }
+        cout << endl;
+}
+
 int main() {
     // Declaring and initializing an array of size 5
     int arr[5] = {2, 4, 8, 12, 16};
@@ -121,5 +128,50 @@ int main() {
         cout << *(ptr + i) << " ";
     }
     cout << endl;
+
+    // Arrays are passed to functions using pointers, as the array name 
+    // decays to a pointer to the first element.
+    // So, we also need to pass the size of the array to the function.
+    int arr13[] = {2, 4, 8, 12, 16};
+    int n3 = sizeof(arr13) / sizeof(arr13[0]);
+    printArray(arr13, n3);
+
+    // Arrays declared with more than one dimension are called multidimensional arrays.
+    // Syntax data_type array_name [size1][size2]...
+    // Two-Dimensional Array: It is an array that has exactly two dimensions. It can be visualized in the form of rows and columns organized in a two-dimensional plane.
+    // Three-Dimensional Array: A 3D array has exactly three dimensions. It can be visualized as a collection of 2D arrays stacked on top of each other to create the third dimension.
+    int arr14[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 4; j++) {
+            cout << arr14[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    int arr15[2][3][4] = {
+        {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12}
+        },
+        {
+            {13, 14, 15, 16},
+            {17, 18, 19, 20},
+            {21, 22, 23, 24}
+        }
+    };
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            for (int k = 0; k < 4; k++) {
+                cout << arr15[i][j][k] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
     return 0;
 }
