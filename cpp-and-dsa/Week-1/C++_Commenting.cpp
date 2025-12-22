@@ -1,3 +1,6 @@
+/* This a comment */
+// This is also a comment
+
 #include <iostream>
 using namespace std;
 
