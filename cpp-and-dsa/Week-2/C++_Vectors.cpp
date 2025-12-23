@@ -75,5 +75,48 @@ int main() {
         cout << v8[i] << " ";
     }
     cout << endl;
+
+    /*
+        To check if the vector is empty we use empty() function. It returns true if the vector has no elements ,and false otherwise.
+        This is useful before accessing or modifying the vector to avoid errors.
+    */
+
+    vector<int> v9;
+    if (v9.empty()) {
+        cout << "Vector is empty" << endl;
+    } else {
+        cout << "Vector is not empty" << endl;
+    }
+
+    v9.push_back(100);
+    for(int x : v9) {
+        cout << x << " ";
+    }
+    cout << endl;
+    if(!v9.empty()) {
+        cout << "Vector is not empty" << endl;
+    } else {
+        cout << "Vector is empty" << endl;
+    }
+
+    // Multi dimensional Vectors
+    /*
+        Multidimensional vectors are dynamic arrays that can store data in more than one dimension, like tables or grids.
+        They are implemented using vector inside another vector, allowing flexible row-column (2D), or even higher-dimensional structures.
+    */
+   vector<vector<int>> matrix = {
+       {1, 2, 3},
+       {4, 5, 6},
+       {7, 8, 9}
+   };
+    for (int i = 0; i < matrix.size(); i++) {
+        for (int j = 0; j < matrix[i].size(); j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+    // Accessing element at row 1, column 2
+    cout << "Element at (1,2): " << matrix[1][2] << endl;
+
     return 0;
 }
