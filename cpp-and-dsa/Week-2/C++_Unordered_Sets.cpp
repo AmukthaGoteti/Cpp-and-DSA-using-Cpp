@@ -18,10 +18,8 @@ int main() {
     // unordered_set<T> us;
     // where, T: Type of the key. us: Name assigned to the unordered set.
     unordered_set<int> us1;
-
     // Initialize an unordered_set
     unordered_set<int> us2 = {1, 2, 3, 4, 5};
-
     for (auto x : us2)
         cout << x << " ";
     cout << endl;
