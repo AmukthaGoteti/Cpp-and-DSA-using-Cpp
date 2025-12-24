@@ -38,5 +38,15 @@ int main() {
         cout << x << " ";
     }
     cout << endl;
+
+    // Accessing Elements
+    /*
+        In an unordered set, you cannot use an index to access elements, so you must move an iterator from `begin()` using `next()` or `advance()` to reach a specific position.
+    */
+    unordered_set<int> us4 = {1, 2, 3, 4, 5};
+    // Accesing third element
+    auto it = next(us4.begin(), 2);
+    cout << *it << " " << endl;
+    // This operation is not very useful in unordered containers.
     return 0;
 }
