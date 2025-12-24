@@ -48,5 +48,20 @@ int main() {
     auto it = next(us4.begin(), 2);
     cout << *it << " " << endl;
     // This operation is not very useful in unordered containers.
+    
+    // Updating Elements
+    // In unordered set, the value of the elements cannot be changed after it is inserted.
+
+    // Finding Elements
+    // An unordered set allows fast searching using `find()`, which returns an iterator to the element if it exists, or `end()` if it does not.
+    unordered_set<int> us5 = {1, 2, 3, 4, 5};
+    auto it1 = us5.find(4);
+    if(it1 != us5.end()) {
+        cout << *it;
+    }
+    else {
+        cout << "Element not Found";
+    }
+    cout << endl;
     return 0;
 }
