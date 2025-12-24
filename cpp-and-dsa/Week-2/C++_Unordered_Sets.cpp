@@ -90,5 +90,17 @@ int main() {
         cout << x << " ";
     }
     cout << endl;
+
+    /*
+        Time Complexity:
+            Operation	                    Time Complexity
+            Insert an element	            O(1) (average)
+            Delete an element	            O(1) (average)
+            Access element by position      O(n)
+            Find element by value	        O(1) (average)
+            Traverse the set	            O(n)
+    */
+
+    // In C++, `unordered_set` uses a hash table to store unique values, ignores duplicates, and allows fast insertion, deletion, and searching in average O(1) time.
     return 0;
 }
