@@ -4,11 +4,10 @@
     are fast with average O(1) time.
 */
 /*
-    The main difference is that unordered_set stores only unique values, while unordered_map stores key–value pairs.
-
-    unordered_set: used when you only need to store and search unique elements.
-
-    unordered_map: used when each value must be linked to a unique key.
+    The main difference is that unordered_set stores only unique values, 
+    while unordered_map stores key–value pairs.
+        unordered_set: used when you only need to store and search unique elements.
+        unordered_map: used when each value must be linked to a unique key.
 */
 
 #include <iostream>
