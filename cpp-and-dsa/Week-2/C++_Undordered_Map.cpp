@@ -59,5 +59,15 @@ int main() {
     unordered_map<int, string> um3 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
     cout << um3[2] << endl;
     cout << um3.at(1) << endl;
+    // Updaing Elements
+    /*
+        In unordered map, elements can be updated by simply assigning a new value 
+        while accessing using assignment operator.
+        But again with [] operator, 
+        a new element will be created if the key is not present.
+    */
+    unordered_map<int, string> um4 = {{1, "Geeks"}, {2, "For"}, {3, "C++"}};
+    um4[2] = "By";
+    cout << um4[2] << endl;
     return 0;
 }
