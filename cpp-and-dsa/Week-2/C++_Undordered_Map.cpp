@@ -1,4 +1,8 @@
-// In C++, `unordered_map` stores unique key-value pairs using hashing, so elements are not sorted, but searching, inserting, and deleting are fast with average O(1) time.
+/* 
+    In C++, `unordered_map` stores unique key-value pairs using hashing, 
+    so elements are not sorted, but searching, inserting, and deleting 
+    are fast with average O(1) time.
+*/
 /*
     The main difference is that unordered_set stores only unique values, while unordered_map stores key–value pairs.
 
