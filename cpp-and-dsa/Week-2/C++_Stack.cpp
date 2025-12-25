@@ -16,4 +16,7 @@ int main() {
     st.push(10);
     st.push(5);
     cout << "Top element: " << st.top() << endl;
+    st.pop();
+    cout << "Top element after pop: " << st.top() << endl;
+    return 0;
 }
