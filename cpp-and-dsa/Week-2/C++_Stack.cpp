@@ -23,5 +23,33 @@ int main() {
     // Syntax -> stack<T> st;
     // T: DataType (int, char etc.) of elements in the stack
     // st: Name assigned to the stack.
+
+    // Basic Operations
+    // Insertion Elements
+    /*
+        In stack, new elements can only be inserted at the top of 
+        the stack by using push() method.
+    */
+    st.push(10);
+    st.push(20);
+    st.push(30);
+    st.push(40);
+
+    // Accessing Elements
+    /*
+        Only the top element of the stack can be accessed using top() method.
+    */
+    cout << st.top() << endl;
+    // Peek() is used to only view the topmost element of the stack not print it.
+    // Deleting Elements
+    /*
+        In stack, only the top element of the stack can be deleted by using pop() method in one operation.
+    */
+    st.pop();
+    while(!st.empty()) {
+        cout << st.top() << " ";
+        st.pop();
+    }
+    cout << endl;
     return 0;
 }
