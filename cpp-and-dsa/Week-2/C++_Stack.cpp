@@ -18,5 +18,10 @@ int main() {
     cout << "Top element: " << st.top() << endl;
     st.pop();
     cout << "Top element after pop: " << st.top() << endl;
+
+    // Stack is defined as std::stack class template inside the <stack> header file.
+    // Syntax -> stack<T> st;
+    // T: DataType (int, char etc.) of elements in the stack
+    // st: Name assigned to the stack.
     return 0;
 }
