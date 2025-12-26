@@ -63,5 +63,17 @@ int main() {
     if(!st.empty()) {
         cout << "Stack is not empty. Top eleemnt: " << st.top() << endl;
     }
+    // Size of stack
+    /*
+        The size() function in a stack returns the number of 
+        elements currently in the stack. 
+        It helps to determine how many items are 
+        stored without modifying the stack.
+    */
+    st.push(10);
+    st.push(5);
+    cout << "Size of stack: " << st.size() << endl;
+    st.pop();
+    cout << "Size of stack: " << st.size() << endl;
     return 0;
 }
