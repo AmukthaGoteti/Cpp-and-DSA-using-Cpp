@@ -74,5 +74,17 @@ int main() {
         q1.pop();
     }
     cout << endl;
+    // Empty Method
+    // This checks wheather the quue is empty
+    // It returns true if the queue has no elements; 
+    // otherwise, it returns false
+    queue<int> q2;
+    if(q2.empty()) {
+        cout << "Queue is empty " << endl;
+    }
+    q2.push(100);
+    if(!q2.empty()) {
+        cout << "Queue is not empty. Front element: " << q2.front() << endl;
+    }
     return 0;
 }
