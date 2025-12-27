@@ -95,5 +95,19 @@ int main() {
     cout << "Size of the queue: " << q3.size() << endl;
     q3.pop();
     cout << "Size of the queue: " << q3.size() << endl;
+    // Pseudo Traversal
+    // Since only the front and back element can be accessed in a queue, we cannot directly traverse it.
+    // On the other hand, we can create a copy of the queue, access the front element, and then delete it, and continue this process until the copied queue is empty, we can effectively traverse all the elements of the queue.
+    // Time complexity for traversal : O(n)
+    queue<int> q4;
+    q4.push(3);
+    q4.push(4);
+    q4.push(5);
+    queue<int> temp1 = q4;
+    while(!temp1.empty()) {
+        cout << temp1.front() << " ";
+        temp1.pop();
+    }
+    cout << endl;
     return 0;
 }
