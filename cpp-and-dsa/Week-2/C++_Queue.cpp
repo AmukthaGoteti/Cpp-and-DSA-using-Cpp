@@ -86,5 +86,14 @@ int main() {
     if(!q2.empty()) {
         cout << "Queue is not empty. Front element: " << q2.front() << endl;
     }
+    // Size of Queue
+    // The size() function in a queue returns the number of eleements in the queue.
+    // It helps to determine how many items are stored without modifying the queue.
+    queue<int> q3;
+    q3.push(10);
+    q3.push(5);
+    cout << "Size of the queue: " << q3.size() << endl;
+    q3.pop();
+    cout << "Size of the queue: " << q3.size() << endl;
     return 0;
 }
