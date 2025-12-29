@@ -42,10 +42,24 @@ int main() {
 
     // Basic Operations
     // Insertion Elements
+    // Elements can be inserted in the priority queue using push() method. After insertion, priority queue reorganize itself in such a way that the highest priority element is always at the top.
     priority_queue<int> pq1;
     pq1.push(9);
     pq1.push(8);
     pq1.push(6);
-    
+    while(!pq1.empty())
+    {
+        cout << pq1.top() << " ";
+        pq1.pop();
+    }
+    cout << endl;
+    // Accessing Elements
+    // Only the top element of the priority queue can be accessed using top() method. It is the element with the highest priority in priority queue.
+    priority_queue<int> pq2;
+    pq2.push(9);
+    pq2.push(8);
+    pq2.push(6);
+    // Accessing top element
+    cout << pq2.top() << endl;
     return 0;
 }
