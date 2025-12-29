@@ -61,5 +61,50 @@ int main() {
     pq2.push(6);
     // Accessing top element
     cout << pq2.top() << endl;
+    // Deleting Elements
+    // In priority queue, deletion can only be done from the top of the priority queue using pop()method. It means that we can only remove the element with highest priority in one move. After deletion, the priority queue rearranges itself such that the next greatest priority element becomes the top element.
+    priority_queue<int> pq3;
+    pq3.push(9);
+    pq3.push(8);
+    pq3.push(6);
+    // Delete top element
+    pq3.pop();
+    cout << pq3.top() << endl;
+    // Empty()
+    // This checks whether the priority queue is empty. It returns true if the priority queue has no elements; otherwise, it returns false.
+    priority_queue<int> pq4;
+    if(pq4.empty()) {
+        cout << "Priority queue is empty. " << endl;
+    }
+    pq4.push(50);
+    pq4.push(30);
+    if(!pq4.empty())
+    {
+        cout << "Priority queue is not empty. Top element: " << pq4.top() << endl;
+    }
+    // Size of priority queue
+    // The size() function in a priority queue returns the number of elements currently in the priority queue.
+    priority_queue<int> pq5;
+    // Add elements to the priority queue
+    pq5.push(100);
+    pq5.push(50);
+    // Display the size of pririty queue
+    cout << "Size of priority queue: " << pq5.size() << endl;
+    // Remove one element
+    pq5.pop();
+    // Display size again
+    cout << "Size after one pop: " << pq5.size() << endl;
+    // Pseudo Traversal
+    // In priority queue, we can only access top element of the priority queue, so we cannot directly traverse it. However, we can create a copy of the priority queue, access and delete the top element and repeat this process until the copied priority queue is empty. In this way, we can effectively traverse all the elements of the priority queue.
+    priority_queue<int> pq6;
+    pq6.push(9);
+    pq6.push(8);
+    pq6.push(6);
+    priority_queue<int> temp = pq6;
+    while(!temp.empty()) {
+        cout << temp.top() << " ";
+        temp.pop();
+    }
+    cout << endl;
     return 0;
 }
