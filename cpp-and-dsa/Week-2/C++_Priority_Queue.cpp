@@ -106,5 +106,31 @@ int main() {
         temp.pop();
     }
     cout << endl;
+    // Changing Priority Queue Order
+    /*
+        All the above operations are demonstrated on a priority queue implementing max heap. This can be changed by using a custom comparator in which you define the priority parameter and how to compare them.
+        If you only want to assign highest priority to the smallest element (min-heap), then inbuilt greater<type> functional object can be used.
+    */
+    priority_queue<int, vector<int>, greater<int>> pq7;
+    pq7.push(9);
+    pq7.push(8);
+    pq7.push(6);
+    auto temp1 = pq7;
+    while(!temp1.empty())
+    {
+        cout << temp1.top() << " ";
+        temp1.pop();
+    }
+    cout << endl;
+    /*
+        Time Complexity
+            The below table lists the time complexity of the above operations on priority queue:
+                Operation	                                        Time Complexity
+                Add element	                                        O(log n)
+                Delete element	                                    O(log n)
+                Find maximum element in max heap.	                O(1)
+                Find minimum element in min heap.                   O(1)
+                Initialize priority queue from another container.   O(n)
+    */
     return 0;
 }
