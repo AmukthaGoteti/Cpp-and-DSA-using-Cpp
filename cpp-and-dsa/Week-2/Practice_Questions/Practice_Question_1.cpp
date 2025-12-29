@@ -38,5 +38,18 @@ int main() {
         cout << i << " ";
     }
     cout << endl;
+    // Insert Multiple Copies of an Element
+    // The vector insert() can also be used to insert multiple copies of an element at the given index.
+    // Syntax -> v.insert(pos, n, val)
+    /*
+        val - Value to be inserted.
+        pos: Iterator to the position where val is to be inserted.
+        n: Number of times val is to be inserted.
+    */
+    vector<int> v2 = {1, 3, 4, 5};
+    v2.insert(v2.begin() + 1, 3, 2);
+    for(auto i: v2)
+        cout << i << " ";
+    cout << endl;
     return 0;
 }
