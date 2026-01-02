@@ -8,7 +8,7 @@
             3. c (Reverses the vector A)
             4. d (prints the size of the vector)
             5. e (prints space separated values of the vector)
-            6. f  (Sorts the vector A in descending order)
+            6. f (Sorts the vector A in descending order)
     Expected Output:
         The output for each test case will  be space separated integers denoting the results of each query
     Examples:
