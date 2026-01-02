@@ -57,6 +57,7 @@ int main() {
         cout << st.top() << " ";
         st.pop();
     }
+    cout << endl;
 
     return 0;
 }
