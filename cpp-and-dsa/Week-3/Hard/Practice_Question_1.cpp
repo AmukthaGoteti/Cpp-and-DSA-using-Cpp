@@ -21,86 +21,35 @@
 using namespace std;
 
 vector<vector<int>> fourSum(vector<int>& nums, int target) {
+    sort(nums.begin(), nums.end());
+    vector<vector<int>> res;
     int n = nums.size();
-    vector<vector<int>> result;
-    // Try all quadruples
-    for (int a = 0; a < n; a++) {
-        for (int b = a + 1; b < n; b++) {
-            for (int c = b + 1; c < n; c++) {
-                for (int d = c + 1; d < n; d++) {
-                    if (nums[a] + nums[b] + nums[c] + nums[d] == target) {
-                        vector<int> quad = {nums[a], nums[b], nums[c], nums[d]};
-                        // Sort quad manually using only for & if (simple bubble sort)
-                        for (int i = 0; i < 4; i++) {
-                            for (int j = 0; j < 3; j++) {
-                                if (quad[j] > quad[j+1]) {
-                                    int tmp = quad[j];
-                                    quad[j] = quad[j+1];
-                                    quad[j+1] = tmp;
-                                }
-                            }
-                        }
-                        result.push_back(quad);
-                    }
-                }
+    for(int i = 0; i < n; i++){
+        if(i > 0 && nums[i] == nums[i-1]) continue;
+        for(int j = i+1; j < n; j++){
+            if(j > i+1 && nums[j] == nums[j-1]) continue;
+            long long t = (long long)target - nums[i] - nums[j];
+            int l = j+1, r = n-1;
+            while(l < r){
+                long long sum = nums[l] + nums[r];
+                if(sum == t){
+                    res.push_back({nums[i], nums[j], nums[l], nums[r]});
+                    while(l < r && nums[l] == nums[l+1]) l++;
+                    while(l < r && nums[r] == nums[r-1]) r--;
+                    l++; r--;
+                } else if(sum < t) l++;
+                else r--;
             }
         }
     }
-    // Sort result lexicographically (again bubble sort with for+if)
-    int m = result.size();
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m - 1; j++) {
-            for (int k = 0; k < 4; k++) {
-                if (result[j][k] < result[j+1][k]) break;
-                if (result[j][k] > result[j+1][k]) {
-                    auto tmp = result[j];
-                    result[j] = result[j+1];
-                    result[j+1] = tmp;
-                    break;
-                }
-            }
-        }
-    }
-    // Remove duplicates manually
-    vector<vector<int>> uniqueRes;
-    for (int i = 0; i < m; i++) {
-        bool isDuplicate = false;
-        for (int j = 0; j < uniqueRes.size(); j++) {
-            bool same = true;
-            for (int k = 0; k < 4; k++) {
-                if (result[i][k] != uniqueRes[j][k]) {
-                    same = false;
-                    break;
-                }
-            }
-            if (same) {
-                isDuplicate = true;
-                break;
-            }
-        }
-        if (!isDuplicate) {
-            uniqueRes.push_back(result[i]);
-        }
-    }
-    return uniqueRes;
+    return res;
 }
 
-int main() {
-    int n;
-    cin >> n;
-    int target;
-    cin >> target;
+int main(){
+    int n, target; cin >> n >> target;
     vector<int> nums(n);
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
-    }
-    vector<vector<int>> ans = fourSum(nums, target);
-    if (ans.size() > 0) {
-        for (int i = 0; i < ans.size(); i++) {
-            cout << "[" << ans[i][0] << ", " << ans[i][1] << ", " << ans[i][2] << ", " << ans[i][3] << "]\n";
-        }
-    } else {
-        cout << "No solution found\n";
-    }
-    return 0;
+    for(int &x : nums) cin >> x;
+    auto ans = fourSum(nums, target);
+    if(ans.empty()) cout << "No solution found\n";
+    else for(auto &v : ans) cout << "["<<v[0]<<", "<<v[1]<<", "<<v[2]<<", "<<v[3]<<"]\n";
 }
