@@ -35,7 +35,9 @@ bool checkSubarraySum(vector<int>& nums, int k) {
         prefix += nums[i];
         prefix %= k;
         if (seen.find(prefix) != seen.end()) {
-            if (i - seen[prefix] >= 2) return true;
+            if (i - seen[prefix] >= 2) {
+                return true;
+            }
         } else {
             seen[prefix] = i;
         }
