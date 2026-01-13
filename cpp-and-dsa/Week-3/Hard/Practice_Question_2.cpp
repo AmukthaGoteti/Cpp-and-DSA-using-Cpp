@@ -45,8 +45,7 @@ bool checkSubarraySum(vector<int>& nums, int k) {
     return false;
 }
 
-int main() 
-{
+int main() {
     int n, k;
     cin >> n >> k;
     vector<int> nums(n);
