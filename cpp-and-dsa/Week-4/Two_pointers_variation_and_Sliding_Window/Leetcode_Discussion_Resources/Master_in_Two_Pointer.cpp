@@ -109,18 +109,14 @@ int main() {
     }
     // temp now points to the middle node
     cout << "Middle element: " << temp->data << endl;
-
     // Efficient Approach
     // Efficient Approach: Slow & Fast pointers
     Node* slow = head;
     Node* fast = head;
-
     while (fast != nullptr && fast->next != nullptr) {
         slow = slow->next;          // moves 1 step
         fast = fast->next->next;    // moves 2 steps
     }
-
     cout << "Middle element: " << slow->data << endl;
-
     return 0;
 }
