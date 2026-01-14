@@ -27,6 +27,27 @@
 #include <vector>
 using namespace std;
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+bool pairExists(int arr[], int n, int S)
+{
+    int i = 0;
+    int j = n - 1;
+    while (i < j)
+    {
+        int curr_sum = arr[i] + arr[j];
+        if (curr_sum == S)
+            return true;
+        else if (curr_sum < S)
+            i++;
+        else
+            j--;
+    }
+    return false;
+}
+
 int main() {
     int n, S;
     cout << "Enter the size of the array: ";
@@ -38,14 +59,22 @@ int main() {
     }
     cout << "Enter the target sum S: ";
     cin >> S;
-    for (int i = 0; i < n - 1; i++) {
+    // ----- Brute Force (unchanged) -----
+    /* for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (arr[i] + arr[j] == S) {
                 cout << "True" << endl;
-                return 0; // exit immediately after finding pair
+                return 0;
             }
         }
     }
-    cout << "False" << endl;
+    cout << "False" << endl;*/
+    // ----- Efficient Approach -----
+    if (pairExists(arr.data(), n, S)) {
+        cout << "True";
+    } else {
+        cout << "False";
+    }
+    cout << endl;
     return 0;
 }
