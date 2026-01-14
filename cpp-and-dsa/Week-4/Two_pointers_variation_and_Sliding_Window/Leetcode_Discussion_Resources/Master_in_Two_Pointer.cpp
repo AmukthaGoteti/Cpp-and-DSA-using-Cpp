@@ -10,21 +10,6 @@
         1. One pointer at each end
         2. Different Paces
 */
-// One pointer at each end
-// One pointer starts from beginning and other from the end and they proceed towards each other
-/*
-    Problem Statement:
-        In a sorted array, find if a pair exists with a given sum S
-*/
-/*
-    Brute Force Approach:
-        A brute force approach is a straightforward, 
-        trial-and-error problem-solving method that 
-        systematically checks every possible solution or combination until the correct one is found
-    Efficient Approach:
-        Involves writing code that does the job fast, uses the right tools, and doesn’t waste memory. 
-        Let the C++ compiler make it run even smoother.
-*/
 
 #include <iostream>
 #include <vector>
@@ -47,6 +32,21 @@ bool pairExists(int arr[], int n, int S)
 }
 
 int main() {
+    // One pointer at each end
+    // One pointer starts from beginning and other from the end and they proceed towards each other
+    /*
+        Problem Statement:
+            In a sorted array, find if a pair exists with a given sum S
+    */
+    /*
+        Brute Force Approach:
+            A brute force approach is a straightforward, 
+            trial-and-error problem-solving method that 
+            systematically checks every possible solution or combination until the correct one is found
+        Efficient Approach:
+            Involves writing code that does the job fast, uses the right tools, and doesn’t waste memory. 
+            Let the C++ compiler make it run even smoother.
+    */
     int n, S;
     cout << "Enter the size of the array: ";
     cin >> n;
