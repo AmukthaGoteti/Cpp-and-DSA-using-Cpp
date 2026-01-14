@@ -16,11 +16,14 @@
     Problem Statement:
         In a sorted array, find if a pair exists with a given sum S
 */
-// Brute Force Approach:
 /*
-    A brute force approach is a straightforward, 
-    trial-and-error problem-solving method that 
-    systematically checks every possible solution or combination until the correct one is found
+    Brute Force Approach:
+        A brute force approach is a straightforward, 
+        trial-and-error problem-solving method that 
+        systematically checks every possible solution or combination until the correct one is found
+    Efficient Approach:
+        Write code that does the job fast, uses the right tools, and doesn’t waste memory. 
+        Let the C++ compiler make it run even smoother.
 */
 
 #include <iostream>
