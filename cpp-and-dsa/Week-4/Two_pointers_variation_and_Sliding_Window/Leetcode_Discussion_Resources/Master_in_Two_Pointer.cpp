@@ -27,16 +27,11 @@
 #include <vector>
 using namespace std;
 
-#include <iostream>
-#include <vector>
-using namespace std;
-
 bool pairExists(int arr[], int n, int S)
 {
     int i = 0;
     int j = n - 1;
-    while (i < j)
-    {
+    while (i < j) {
         int curr_sum = arr[i] + arr[j];
         if (curr_sum == S)
             return true;
