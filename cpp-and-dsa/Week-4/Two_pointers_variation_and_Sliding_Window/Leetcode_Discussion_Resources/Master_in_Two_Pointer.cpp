@@ -22,7 +22,7 @@
         trial-and-error problem-solving method that 
         systematically checks every possible solution or combination until the correct one is found
     Efficient Approach:
-        Write code that does the job fast, uses the right tools, and doesn’t waste memory. 
+        Involves writing code that does the job fast, uses the right tools, and doesn’t waste memory. 
         Let the C++ compiler make it run even smoother.
 */
 
