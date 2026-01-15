@@ -11,3 +11,17 @@
     from stractch, the sliding window reuses past computations by
     increamentally updating the results as the window moves.
 */
+// Idea/Intuition
+/*
+    We have a "window" of 2 pointers, 
+    left and right, and we keep increasing the right pointer.
+    1. If the element at the right pointer makes 
+       the window not valid, 
+       we keep moving the left pointer 
+       to shrink the window until it becomes valid again.
+    2. Then, we update the global min/max 
+       with the result from the valid window.
+    3. To check if it is valid, 
+       we need to store the "state" of the window 
+       (ex. frequency of letters, number of distinct integers).
+*/
