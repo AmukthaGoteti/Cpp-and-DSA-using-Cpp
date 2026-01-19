@@ -35,12 +35,10 @@ using namespace std;
 void nextPermutation(vector<int>& nums) {
     int n = nums.size();
     int i = n - 2;
-
     // Step 1: find the first index i from the right where nums[i] < nums[i+1]
     while (i >= 0 && nums[i] >= nums[i+1]) {
         i--;
     }
-
     if (i >= 0) {
         // Step 2: find the first index j from the right where nums[j] > nums[i]
         int j = n - 1;
@@ -50,7 +48,6 @@ void nextPermutation(vector<int>& nums) {
         // Step 3: swap nums[i] and nums[j]
         swap(nums[i], nums[j]);
     }
-
     // Step 4: reverse the sequence from i+1 to end
     reverse(nums.begin() + i + 1, nums.end());
 }
@@ -58,7 +55,6 @@ void nextPermutation(vector<int>& nums) {
 int main() {
     vector<int> nums = {1, 2, 3};
     nextPermutation(nums);
-
     for (int x : nums) {
         cout << x << " ";
     }
