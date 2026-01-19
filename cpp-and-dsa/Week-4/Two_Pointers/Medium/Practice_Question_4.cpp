@@ -27,9 +27,15 @@
 using namespace std;
 
 int main() {
-    vector<int> nums = {3, 5, 2, 3};
+    int n;
+    cout << "Enter length of the array (Even number): ";
+    cin >> n;
+    vector<int> nums(n);
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
     sort(nums.begin(), nums.end());
-    int n = nums.size();
     int maxPairSum = 0;
     for (int i = 0; i < n / 2; i++) {
         int pairSum = nums[i] + nums[n - 1 - i];
