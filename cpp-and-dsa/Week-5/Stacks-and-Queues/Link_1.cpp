@@ -82,4 +82,20 @@ int main() {
     st1.push(2);
     st1.push(3);
     cout << st1.top() << " " << endl;
+    // Pop Operation in Stack
+    /*
+        Pop operation is used to 
+        remove an element from the top of the stack.
+        The items are popped in the 
+        reversed order in which they are pushed
+    */
+   stack<int> st2;
+   st2.push(1);
+   st2.push(2);
+   st2.push(3);
+   cout << st2.top() << " " << endl;
+   st2.pop();
+   cout << st2.top() << " " << endl;
+   st2.pop();
+   cout << st2.top() << " " << endl;
 }
