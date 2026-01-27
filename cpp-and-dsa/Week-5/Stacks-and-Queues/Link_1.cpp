@@ -79,7 +79,7 @@ int main() {
     */
     stack<int> st1;
     st1.push(1);
-    st1.push(2); 
+    st1.push(2);
     st1.push(3);
     cout << st1.top() << " " << endl;
 }
