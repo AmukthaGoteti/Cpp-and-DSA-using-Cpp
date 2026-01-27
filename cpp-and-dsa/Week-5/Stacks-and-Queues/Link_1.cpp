@@ -71,4 +71,15 @@ int main() {
         st.pop();
     }
     cout << endl;
+
+    // Top or Peek Operation in Stack
+    /*
+        Top or Peek operation is 
+        used to get the top element of the stack.
+    */
+    stack<int> st1;
+    st1.push(1);
+    st1.push(2); 
+    st1.push(3);
+    cout << st1.top() << " " << endl;
 }
