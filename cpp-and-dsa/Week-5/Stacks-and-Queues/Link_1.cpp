@@ -89,13 +89,13 @@ int main() {
         The items are popped in the 
         reversed order in which they are pushed
     */
-   stack<int> st2;
-   st2.push(1);
-   st2.push(2);
-   st2.push(3);
-   cout << st2.top() << " " << endl;
-   st2.pop();
-   cout << st2.top() << " " << endl;
-   st2.pop();
-   cout << st2.top() << " " << endl;
+    stack<int> st2;
+    st2.push(1);
+    st2.push(2);
+    st2.push(3);
+    cout << st2.top() << " " << endl;
+    st2.pop();
+    cout << st2.top() << " " << endl;
+    st2.pop();
+    cout << st2.top() << " " << endl;
 }
