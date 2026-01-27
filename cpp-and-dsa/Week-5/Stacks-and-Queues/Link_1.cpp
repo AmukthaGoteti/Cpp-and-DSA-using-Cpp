@@ -116,4 +116,15 @@ int main() {
     } else {
         cout << "Stack is not empty." << endl;
     }
+    // Size Operation in Stack
+    /*
+        Size operation in Stack is 
+        used to return the count of elements that are present 
+        inside the stack.
+    */
+    stack<int> st4;
+    cout << st4.size() << endl; // 0
+    st4.push(1);
+    st4.push(2);
+    cout << st4.size() << endl; // 2
 }
