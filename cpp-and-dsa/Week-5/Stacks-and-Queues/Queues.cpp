@@ -14,4 +14,15 @@ using namespace std;
 int main() {
     // Create a queue of stings called 'cars'
     queue<string> cars;
+    // Add elements to the queue using the push() function
+    cars.push("Volvo");
+    cars.push("BMW");
+    cars.push("Ford");
+    cars.push("Mazda");
+    // Print Elements
+    while (!cars.empty())
+    {
+        cout << cars.front() << " \n";
+        cars.pop();
+    }
 }
