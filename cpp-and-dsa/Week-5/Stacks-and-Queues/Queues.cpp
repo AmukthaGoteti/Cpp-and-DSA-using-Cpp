@@ -37,5 +37,17 @@ int main() {
     cars.back() = "VW";
     cout << cars.front() << " \n";
     cout << cars.back() << " \n";
+    // Create a queue of strings
+    queue<string> cars1;
+    // Add elements to the queue
+    cars1.push("Volvo");
+    cars1.push("BMW");
+    cars1.push("Ford");
+    cars1.push("Mazda");
+    // Remove the front element (Volvo)
+    cars1.pop();
+    // Access the front element (Now BMW)
+    cout << cars1.front() << " \n";
+    cout << cars.size() << " \n"; // Size of the queue
     return 0;
 }
