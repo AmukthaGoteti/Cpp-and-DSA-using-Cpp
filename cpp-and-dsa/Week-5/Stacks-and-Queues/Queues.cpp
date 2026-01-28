@@ -32,4 +32,10 @@ int main() {
     cars.push("Mazda");
     cout << cars.front() << " \n";
     cout << cars.back() << " \n";
+    // Change Fron and Back Elements
+    cars.front() = "Tesla";
+    cars.back() = "VW";
+    cout << cars.front() << " \n";
+    cout << cars.back() << " \n";
+    return 0;
 }
